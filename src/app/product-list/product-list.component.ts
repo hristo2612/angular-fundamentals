@@ -13,6 +13,7 @@ export class ProductListComponent implements OnInit {
   showImage: boolean = false;
   products: IProduct[];
   listFilter: string = 'cushion';
+  message: string = '';
 
   constructor() { 
     this.pageTitle = '<--- Product List --->';
@@ -80,11 +81,15 @@ export class ProductListComponent implements OnInit {
     ];
   }
 
-  toggleImage() {
+  onRatingClicked(event): void {
+    this.message = 'The rating ' + event + ' was clicked';
+  }
+
+  toggleImage(): void {
     this.showImage = !this.showImage;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
   }
 

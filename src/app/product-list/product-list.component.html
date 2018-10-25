@@ -11,6 +11,7 @@
               <input type="text" [(ngModel)]='listFilter' />
           </div>
       </div>
+      <h3>{{message}}</h3>
 
       <div class='row'>
           <h3>Products filtered by: {{listFilter}}</h3>
@@ -41,7 +42,7 @@
                   <td>{{product.productCode}}</td>
                   <td>{{product.releaseDate}}</td>
                   <td>{{product.price | currency:'USD':true:'1.2-2'}}</td>
-                  <td>{{product.starRating}}</td>
+                  <td><pm-star [rating]='product.starRating' (notify)='onRatingClicked($event)'></pm-star></td>
                 </tr>
               </tbody>
           </table>
