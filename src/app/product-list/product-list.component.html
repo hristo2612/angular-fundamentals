@@ -1,0 +1,50 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+      {{pageTitle}}
+  </div>
+
+  <!-- Filter the Products   -->
+  <div class='panel-body'>
+      <div class='row'>
+          <div class="m-1"><strong>Search:</strong></div>
+          <div class="m-1">
+              <input type="text" [(ngModel)]='listFilter' />
+          </div>
+      </div>
+
+      <div class='row'>
+          <h3>Products filtered by: {{listFilter}}</h3>
+      </div>
+
+      <!-- <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div> -->
+
+      <div class='table-responsive'>
+          <table class='table'>
+              <thead>
+                  <tr>
+                      <th>
+                          <button class='btn btn-primary' (click)='toggleImage()'>
+                              {{showImage ? 'Hide' : 'Show'}} Image
+                          </button>
+                      </th>
+                      <th>Product</th>
+                      <th>Code</th>
+                      <th>Available</th>
+                      <th>Price</th>
+                      <th>5 Star Rating</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products">
+                  <td><img *ngIf="showImage" width=50 [src]='product.imageUrl' [title]='product.productName | uppercase' /></td>
+                  <td>{{product.productName}}</td>
+                  <td>{{product.productCode}}</td>
+                  <td>{{product.releaseDate}}</td>
+                  <td>{{product.price | currency:'USD':true:'1.2-2'}}</td>
+                  <td>{{product.starRating}}</td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
