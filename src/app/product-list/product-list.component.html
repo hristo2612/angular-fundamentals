@@ -14,7 +14,7 @@
       <h3>{{message}}</h3>
 
       <div class='row'>
-          <h3>Products filtered by: {{listFilter}}</h3>
+          <h3>Products filtered by: {{listFilter || '*'}}</h3>
       </div>
 
       <!-- <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div> -->
@@ -37,11 +37,14 @@
               </thead>
               <tbody>
                 <tr *ngFor="let product of products">
-                  <td><img *ngIf="showImage" width=50 [src]='product.imageUrl' [title]='product.productName | uppercase' /></td>
+                  <td>
+                    <img *ngIf="showImage" (load)="onLoad()" width=50 [src]='product.imageUrl' [title]='product.productName | uppercase' />
+                    <img *ngIf=" showImage && loadingImages" width=50 src="/assets/images/loading.gif" alt="loading" />
+                  </td>
                   <td>{{product.productName}}</td>
                   <td>{{product.productCode}}</td>
                   <td>{{product.releaseDate}}</td>
-                  <td>{{product.price | currency:'USD':true:'1.2-2'}}</td>
+                  <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
                   <td><pm-star [rating]='product.starRating' (notify)='onRatingClicked($event)'></pm-star></td>
                 </tr>
               </tbody>
