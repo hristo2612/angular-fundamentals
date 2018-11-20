@@ -1,3 +1,21 @@
 .nav-link {
   font-size: large;
 }
+
+.navbar ul {
+  list-style:none;
+  padding:0;
+  display: inline;
+}
+
+.navbar ul li { 
+  position: relative;
+  display: inline;
+}
+
+.navbar ul li a { 
+  display: inline;
+  margin: 5px;
+}
+
+
