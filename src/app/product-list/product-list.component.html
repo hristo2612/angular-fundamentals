@@ -41,7 +41,7 @@
                 <tr *ngFor="let product of products">
                   <td>
                     <img *ngIf="showImage" (load)="onLoad()" width=50 [src]='product.imageUrl' [title]='product.productName | uppercase' />
-                    <img *ngIf=" showImage && loadingImages" width=50 src="/assets/images/loading.gif" alt="loading" />
+                    <img *ngIf=" showImage && loadingImages" width=50 src="./assets/images/loading.gif" alt="loading" />
                   </td>
                   <td>{{product.productName}}</td>
                   <td>{{product.productCode}}</td>
