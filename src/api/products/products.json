@@ -1,52 +1,92 @@
 [
   {
-    "productId": 1,
-    "productName": "Leaf Rake",
-    "productCode": "GDN-0011",
-    "releaseDate": "March 19, 2016",
-    "description": "Leaf rake with 48-inch wooden handle.",
-    "price": 19.95,
-    "starRating": 3.2,
-    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-  },
-  {
     "productId": 2,
-    "productName": "Garden Cart",
+    "productName": "Unknown vegetable",
     "productCode": "GDN-0023",
     "releaseDate": "March 18, 2016",
-    "description": "15 gallon capacity rolling garden cart",
+    "description": "Please identify this vegetable before buying it... P.S it is a Zucchini",
     "price": 32.99,
     "starRating": 4.2,
-    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/177513/courgette.png"
   },
   {
     "productId": 5,
-    "productName": "Hammer",
+    "productName": "Computer",
     "productCode": "TBX-0048",
     "releaseDate": "May 21, 2016",
-    "description": "Curved claw steel hammer",
+    "description": "Strictly used for porn",
     "price": 8.9,
     "starRating": 4.8,
-    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/281494/GlitchSimplifiedVintageAppleMacEsque.png"
   },
   {
     "productId": 8,
-    "productName": "Saw",
+    "productName": "Washington Coin",
     "productCode": "TBX-0022",
     "releaseDate": "May 15, 2016",
-    "description": "15-inch steel blade hand saw",
+    "description": "George Washington on a coin",
     "price": 11.55,
     "starRating": 3.7,
-    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/01/22/21/10/dollar-1156662_960_720.png"
   },
   {
     "productId": 10,
-    "productName": "Video Game Controller",
+    "productName": "Old Smartphone",
     "productCode": "GMG-0042",
     "releaseDate": "October 15, 2015",
-    "description": "Standard two-button video game controller",
+    "description": "Dusty old smartphone",
     "price": 35.95,
     "starRating": 4.6,
-    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/03/26/00/51/treo-650-smartphone-1279873_960_720.png"
+  },
+  {
+    "productId": 10,
+    "productName": "A nice orange",
+    "productCode": "GMG-1",
+    "releaseDate": "October 12, 2013",
+    "description": "A standard orange",
+    "price": 66.7,
+    "starRating": 4.6,
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/12991/nicubunu-Orange.png"
+  },
+  {
+    "productId": 10,
+    "productName": "Unicorn Frog",
+    "productCode": "GMG-2",
+    "releaseDate": "October 15, 2018",
+    "description": "Standard two-button video game controller",
+    "price": 5.9,
+    "starRating": 2,
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/2172/ben-Azureus-frog.png"
+  },
+  {
+    "productId": 10,
+    "productName": "Magic Apple",
+    "productCode": "GMG-0041",
+    "releaseDate": "October 15, 2015",
+    "description": "A magical Apple that will beat you up",
+    "price": 365.95,
+    "starRating": 3,
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4641/Chrisdesign-Photorealistic-Green-Apple.png"
+  },
+  {
+    "productId": 10,
+    "productName": "Weed infused tea",
+    "productCode": "GMG-0039",
+    "releaseDate": "December 22, 2011",
+    "description": "Standard two-button video game controller",
+    "price": 355.95,
+    "starRating": 2,
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/2941/Rau-A-cup-of-tea.png"
+  },
+  {
+    "productId": 1,
+    "productName": "Broken clock",
+    "productCode": "GDN-0011",
+    "releaseDate": "March 19, 2016",
+    "description": "It is not working, and will never work",
+    "price": 19.95,
+    "starRating": 3.2,
+    "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/217074/12oclock.png"
   }
 ]
