@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
   showImage: boolean = false;
   loadingImages: boolean = true;
   products: IProduct[] | string;
+  errorMessage: string;
   listFilter: string = '';
   message: string = '';
   todos: any = [];
@@ -35,13 +36,11 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._productService.getProducts().subscribe((data) => {
-      if (typeof data === 'string') {
-        console.log('SOMETHING WENT WROOOOOONG');
-      } else {
-      this.products = data;
-      }
-
+    this._productService.getProducts().subscribe((products) => {
+      this.products = products;
+    },
+    (error) => {
+      this.errorMessage = error ? 'Could not retrieve Products, try again later..' : '';
     });
   }
 

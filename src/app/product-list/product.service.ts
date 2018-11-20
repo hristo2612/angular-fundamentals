@@ -11,9 +11,9 @@ export class ProductService {
     constructor(private _http: HttpClient) {
     }
 
-    getProducts(): Observable<string | IProduct[]> {
+    getProducts(): Observable<IProduct[]> {
       return this._http.get<IProduct[]>(this._productsUrl).pipe(
-        tap((data) => { console.log('Myyy precious data is ', data) }),
+        tap((data) => { console.log('All products: ', data) }),
         catchError((error) => { return Observable.throw(error) })
       );
     }
