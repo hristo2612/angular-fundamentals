@@ -20,7 +20,6 @@ export class ProductListComponent implements OnInit {
   todos: any = [];
 
   constructor(private _productService: ProductService) { 
-    this.pageTitle = 'Welcome';
   }
 
   onRatingClicked(event): void {
