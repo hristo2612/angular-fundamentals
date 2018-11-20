@@ -12,16 +12,22 @@ export class ProductListComponent implements OnInit {
 
   pageTitle: string;
   showImage: boolean = false;
-  products: IProduct[];
-  listFilter: string = 'cushion';
+  loadingImages: boolean = true;
+  products: IProduct[] | string;
+  listFilter: string = '';
   message: string = '';
+  todos: any = [];
 
   constructor(private _productService: ProductService) { 
-    this.pageTitle = '<--- Product List --->';
+    this.pageTitle = 'Welcome';
   }
 
   onRatingClicked(event): void {
     this.message = 'The rating ' + event + ' was clicked';
+  }
+
+  onLoad(): void {
+    this.loadingImages = false;
   }
 
   toggleImage(): void {
@@ -29,7 +35,14 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products = this._productService.getProducts();
+    this._productService.getProducts().subscribe((data) => {
+      if (typeof data === 'string') {
+        console.log('SOMETHING WENT WROOOOOONG');
+      } else {
+      this.products = data;
+      }
+
+    });
   }
 
 }
